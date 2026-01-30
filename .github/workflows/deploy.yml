@@ -20,6 +20,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_KEY }}
           script: |
+            echo 'SSH Connection Successful'
             cd /home/ubuntu/node_application
             git pull origin main
             docker compose up -d --build
